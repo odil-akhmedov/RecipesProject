@@ -11,15 +11,22 @@ namespace RecipeProject
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Recipe
     {
         public int Id { get; set; }
+        [Display(Name = "Recipe Name")]
         public string Title { get; set; }
         public string Ingridients { get; set; }
         public string Directions { get; set; }
+
+        [Display(Name = "Preparation Time")]
         public string Prep_time { get; set; }
+        
+        [Display(Name = "Cooking Time")]
         public string Cooking_time { get; set; }
+        [Display(Name = "# of servings")]
         public int NumberOfServings { get; set; }
         public int UserId { get; set; }
     
