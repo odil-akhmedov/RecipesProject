@@ -12,7 +12,7 @@ namespace RecipeProject
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    
+
     public partial class Recipe
     {
         public int Id { get; set; }
@@ -23,13 +23,14 @@ namespace RecipeProject
 
         [Display(Name = "Preparation Time")]
         public string Prep_time { get; set; }
-        
+
         [Display(Name = "Cooking Time")]
         public string Cooking_time { get; set; }
         [Display(Name = "# of servings")]
         public int NumberOfServings { get; set; }
+        [Display(Name = "Creator")]
         public int UserId { get; set; }
-    
+
         public virtual User User { get; set; }
     }
 }
