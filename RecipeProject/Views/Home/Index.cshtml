@@ -1,6 +1,28 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<script type="text/javascript">
+    function validate() {
+        var error = false;
+        var errorList = "";
+
+        var userNameText = documentByID("User");
+        var userName = userNameText.value;
+        if (userName === "") {
+            error = true;
+            errorList += "<li>User Name is required<li>";
+        }
+
+
+    }
+
+
+
+
+
+
+
+    </script>
 
 <div class="jumbotron">
     <h1>Fun Recipes</h1>
