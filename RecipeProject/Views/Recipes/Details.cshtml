@@ -1,0 +1,74 @@
+﻿@model RecipeProject.Recipe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Recipe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingridients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingridients)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Directions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Directions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prep_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prep_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cooking_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cooking_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfServings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfServings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.FirstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
