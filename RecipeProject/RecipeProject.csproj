@@ -201,6 +201,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\meal01.jpg" />
+    <Content Include="img\meal02.jpg" />
+    <Content Include="img\meal03.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="RecipeDBModel.edmx">

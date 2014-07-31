@@ -9,6 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -63,7 +64,9 @@
                 @Html.DisplayFor(modelItem => item.User.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImgSrc)
+                @*@Html.DisplayFor(modelItem => item.ImgSrc)*@
+
+                <img src="@item.ImgSrc" alt="@item.Title" width="100" height="100">
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

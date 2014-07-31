@@ -17,6 +17,7 @@
     <Property Name="ImgFileContent" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="ImgSize" Type="Int64" />
     <Property Name="ImgType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImgSrc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>
