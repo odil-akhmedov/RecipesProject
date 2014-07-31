@@ -3,7 +3,15 @@
 @{
     ViewBag.Title = "Create";
 }
+<script type="text/javascript">
+    function getImgLink(id) {
+        var imgName = document.getElementById(id).alt;
 
+        var imageInput = document.getElementById("ImgSrc");
+        var linkToImage = "/img/" + imgName;
+        imageInput.value = linkToImage;
+    }
+</script>
 
 <h2>Create</h2>
 
@@ -71,6 +79,29 @@
                 @Html.ValidationMessageFor(model => model.NumberOfServings, "", new { @class = "text-danger" })
             </div>
         </div>
+        <div style="width: 375px;height: 350px; margin-left: 100px;">
+            <p>Pick the image for your recipe</p>
+            <input name="imageLink" type="radio" value="meal01" onchange="getImgLink('meal01');" checked>
+            <img src="/img/meal01.jpg" alt="meal01.jpg" id="meal01" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal02" onchange="getImgLink('meal02');">
+            <img src="/img/meal02.jpg" alt="meal02.jpg" id="meal02" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal03" onchange="getImgLink('meal03');">
+            <img src="/img/meal03.jpg" alt="meal03.jpg" id="meal03" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal04" onchange="getImgLink('meal04');">
+            <img src="/img/meal04.jpg" alt="meal04.jpg" id="meal04" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal05" onchange="getImgLink('meal05');">
+            <img src="/img/meal05.jpg" alt="meal05.jpg" id="meal05" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal06" onchange="getImgLink('meal06');">
+            <img src="/img/meal06.jpg" alt="meal06.jpg" id="meal06" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal07" onchange="getImgLink('meal07');">
+            <img src="/img/meal07.jpg" alt="meal07.jpg" id="meal07" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal08" onchange="getImgLink('meal08');">
+            <img src="/img/meal08.jpg" alt="meal08.jpg" id="meal08" width="100" height="100" />
+            <input name="imageLink" type="radio" value="meal09" onchange="getImgLink('meal09');">
+            <img src="/img/meal09.jpg" alt="meal09.jpg" id="meal09" width="100" height="100" />
+            @*<input name="imageLink" type="radio" value="meal10" onchange="getImgLink('meal10');">
+            <img src="/img/meal10.jpg" alt="meal10.jpg" id="meal10" width="100" height="100" />*@
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.ImgSrc, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -86,16 +117,7 @@
                 @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
             </div>
         </div>
-        <form action="/Recipes/Upload" class="dropzone" id="my-awesome-dropzone"></form>
-
-        <form action="/Recipes/Upload/">
-            <input type="file" name="Image" />
-        </form>
-
-        <input type="text" name="imageId" id="imageId" />
-        <button type="button" id="refreshButton">Update Image</button>
-        <img src="/" style="display: none" id="preview" />
-
+        
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />

@@ -23,13 +23,14 @@ namespace RecipeProject
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        [Display(Name = "Creator")]
-        public string FullName {
-            get {
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            {
                 return LastName + ", " + FirstName;
             }
         }
-    
         public virtual ICollection<Recipe> Recipes { get; set; }
     }
 }
