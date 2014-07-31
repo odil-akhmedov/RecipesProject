@@ -10,52 +10,26 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <!--<tr>
-        <th> Html.ActionLink("Last Name", "Index", new { sortOrder = ViewBag.NameSortParm }) </th>
-        <th>First Name </th>
-        <th> Html.ActionLink("Enrollment Date", "Index", new { sortOrder = ViewBag.DateSortParm }) </th>
-        <th></th>
-    </tr>-->
     <tr>
-        <th>
-            #
-        </th>
+
         <th>
             @Html.ActionLink("Recipe Name", "Index", new { sortOrder = ViewBag.TitleSortParm })
         </th>
-        <!--<th>
-            Html.DisplayNameFor(model => model.Title)
-        </th>-->
         <th>
-            @Html.ActionLink("Ingridients", "Index", new { sortOrder = ViewBag.IngridientSortParm })
+            @Html.ActionLink("Ingredients", "Index", new { sortOrder = ViewBag.IngridientSortParm })
         </th>
-        <!--<th>
-            Html.DisplayNameFor(model => model.Ingridients)
-        </th>-->
         <th>
             @Html.ActionLink("Directions", "Index", new { sortOrder = ViewBag.DirectionsSortParm })
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Directions)
-        </th>*@
         <th>
             @Html.ActionLink("Preparation Time", "Index", new { sortOrder = ViewBag.PrepTimeSortParm })
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Prep_time)
-        </th>*@
         <th>
             @Html.ActionLink("Cooking Time", "Index", new { sortOrder = ViewBag.CookingTimeSortParm })
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Cooking_time)
-        </th>*@
         <th>
             @Html.ActionLink("# of servings", "Index", new { sortOrder = ViewBag.NOSSortParm })
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.NumberOfServings)
-        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.User.FirstName)
         </th>
@@ -64,7 +38,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td></td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
