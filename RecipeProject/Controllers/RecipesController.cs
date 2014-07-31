@@ -15,15 +15,48 @@ namespace RecipeProject.Controllers
         private Team_2_RecipesEntities db = new Team_2_RecipesEntities();
 
         // GET: Recipes
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
+            ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
+            ViewBag.IngridientSortParm = String.IsNullOrEmpty(sortOrder) ? "ingridients_desc" : "";
+            ViewBag.DirectionsSortParm = String.IsNullOrEmpty(sortOrder) ? "directions_desc" : "";
+            ViewBag.PrepTimeSortParm = String.IsNullOrEmpty(sortOrder) ? "prep_time_desc" : "";
+            ViewBag.CookingTimeSortParm = String.IsNullOrEmpty(sortOrder) ? "cooking_time_desc" : "";
+            ViewBag.NOSSortParm = String.IsNullOrEmpty(sortOrder) ? "nos_desc" : "";
             var recipes = db.Recipes.Include(r => r.User);
+
+            switch (sortOrder)
+            {
+                case "title_desc":
+                    recipes = recipes.OrderByDescending(s => s.Title);
+                    break;
+                case "ingridients_desc":
+                    recipes = recipes.OrderBy(s => s.Ingridients);
+                    break;
+                case "directions_desc":
+                    recipes = recipes.OrderByDescending(s => s.Directions);
+                    break;
+                case "prep_time_desc":
+                    recipes = recipes.OrderByDescending(s => s.Prep_time);
+                    break;
+                case "cooking_time_desc":
+                    recipes = recipes.OrderByDescending(s => s.Cooking_time);
+                    break;
+                case "nos_desc":
+                    recipes = recipes.OrderByDescending(s => s.NumberOfServings);
+                    break;
+                default:
+                    recipes = recipes.OrderBy(s => s.Title);
+                    break;
+            }
+        
             return View(recipes.ToList());
         }
 
         // GET: Recipes/Details/5
         public ActionResult Details(int? id)
         {
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
