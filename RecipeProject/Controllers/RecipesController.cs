@@ -17,7 +17,7 @@ namespace RecipeProject.Controllers
         private Team_2_RecipesEntities db = new Team_2_RecipesEntities();
 
         // GET: Recipes
-        public ActionResult Index(string sortOrder, string searchString)
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
             ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
             ViewBag.IngridientSortParm = String.IsNullOrEmpty(sortOrder) ? "ingridients_desc" : "";
@@ -26,11 +26,21 @@ namespace RecipeProject.Controllers
             ViewBag.CookingTimeSortParm = String.IsNullOrEmpty(sortOrder) ? "cooking_time_desc" : "";
             ViewBag.NOSSortParm = String.IsNullOrEmpty(sortOrder) ? "nos_desc" : "";
             //var recipes = db.Recipes.Include(r => r.User);
-            var recipes = from s in db.Recipes
-                           select s;
+            if (searchString != null)
+            {
 
-            if (!String.IsNullOrEmpty(searchString)) {
-                recipes = recipes.Where(s => s.Title.ToUpper().Contains(searchString.ToUpper()) ); 
+                page = 1;
+            }
+            else { 
+                searchString = currentFilter; 
+            }
+            ViewBag.CurrentFilter = searchString;
+            var recipes = from s in db.Recipes
+                          select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                recipes = recipes.Where(s => s.Title.ToUpper().Contains(searchString.ToUpper()));
             }
 
 
@@ -58,7 +68,10 @@ namespace RecipeProject.Controllers
                     recipes = recipes.OrderBy(s => s.Title);
                     break;
             }
-        
+            int pageSize = 3; 
+            int pageNumber = (page ?? 1);
+            //return View(recipes.ToPagedList(pageNumber, pageSize));
+
             return View(recipes.ToList());
         }
 
@@ -211,7 +224,7 @@ namespace RecipeProject.Controllers
                     ImgSize = size,
                     ImgType = type
                 };
-                
+
 
                 using (Team_2_RecipesEntities databaseContext = new Team_2_RecipesEntities())
                 {
