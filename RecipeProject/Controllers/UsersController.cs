@@ -15,8 +15,26 @@ namespace RecipeProject.Controllers
         private Team_2_RecipesEntities db = new Team_2_RecipesEntities();
 
         // GET: Users
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
+            ViewBag.FirstNameParm = String.IsNullOrEmpty(sortOrder) ? "first_name_desc" : "";
+            ViewBag.LastNameSortParm = String.IsNullOrEmpty(sortOrder) ? "last_name_desc" : "";
+            var users = db.Recipes.Include(r => r.UserId);
+
+            switch (sortOrder)
+            {
+                case "first_name_desc":
+                    users = users.OrderByDescending(s => s.Title);
+                    break;
+                case "last_name_desc":
+                    users = users.OrderBy(s => s.Ingridients);
+                    break;
+                default:
+
+                    users = users.OrderBy(s => s.Title);
+                    break;
+            }
+
             return View(db.Users.ToList());
         }
 
