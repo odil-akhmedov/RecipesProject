@@ -17,7 +17,7 @@ namespace RecipeProject.Controllers
         private Team_2_RecipesEntities db = new Team_2_RecipesEntities();
 
         // GET: Recipes
-        public ActionResult Index(string sortOrder)
+        public ActionResult Index(string sortOrder, string searchString)
         {
             ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
             ViewBag.IngridientSortParm = String.IsNullOrEmpty(sortOrder) ? "ingridients_desc" : "";
@@ -25,7 +25,14 @@ namespace RecipeProject.Controllers
             ViewBag.PrepTimeSortParm = String.IsNullOrEmpty(sortOrder) ? "prep_time_desc" : "";
             ViewBag.CookingTimeSortParm = String.IsNullOrEmpty(sortOrder) ? "cooking_time_desc" : "";
             ViewBag.NOSSortParm = String.IsNullOrEmpty(sortOrder) ? "nos_desc" : "";
-            var recipes = db.Recipes.Include(r => r.User);
+            //var recipes = db.Recipes.Include(r => r.User);
+            var recipes = from s in db.Recipes
+                           select s;
+
+            if (!String.IsNullOrEmpty(searchString)) {
+                recipes = recipes.Where(s => s.Title.ToUpper().Contains(searchString.ToUpper()) ); 
+            }
+
 
             switch (sortOrder)
             {
@@ -83,7 +90,7 @@ namespace RecipeProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Ingridients,Directions,Prep_time,Cooking_time,NumberOfServings,ImgSrc,UserId")] Recipe recipe)
+        public ActionResult Create([Bind(Include = "Title,Ingridients,Directions,Prep_time,Cooking_time,NumberOfServings,ImgSrc,UserId")] Recipe recipe)
         {
             if (ModelState.IsValid)
             {

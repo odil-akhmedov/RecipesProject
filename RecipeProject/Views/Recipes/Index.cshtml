@@ -9,6 +9,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p> 
+}
 
 <table class="table">
     <tr>
@@ -34,7 +41,7 @@
             @Html.DisplayNameFor(model => model.User.FullName)
         </th>
         <th>
-           @Html.DisplayNameFor(model => model.ImgSrc)
+            @Html.DisplayNameFor(model => model.ImgSrc)
         </th>
         <th></th>
     </tr>
