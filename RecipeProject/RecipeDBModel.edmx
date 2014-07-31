@@ -21,6 +21,7 @@
           <Property Name="ImgFileContent" Type="varbinary(max)" />
           <Property Name="ImgSize" Type="bigint" />
           <Property Name="ImgType" Type="varchar" MaxLength="50" />
+          <Property Name="ImgSrc" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -71,6 +72,7 @@
           <Property Name="ImgFileContent" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="ImgSize" Type="Int64" />
           <Property Name="ImgType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImgSrc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -110,6 +112,7 @@
           <EntitySetMapping Name="Recipes">
             <EntityTypeMapping TypeName="Team_2_RecipesModel.Recipe">
               <MappingFragment StoreEntitySet="Recipes">
+                <ScalarProperty Name="ImgSrc" ColumnName="ImgSrc" />
                 <ScalarProperty Name="ImgType" ColumnName="ImgType" />
                 <ScalarProperty Name="ImgSize" ColumnName="ImgSize" />
                 <ScalarProperty Name="ImgFileContent" ColumnName="ImgFileContent" />
