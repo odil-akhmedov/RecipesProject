@@ -4,6 +4,10 @@
     <EntitySetMapping Name="Recipes">
       <EntityTypeMapping TypeName="Team_2_RecipesModel.Recipe">
         <MappingFragment StoreEntitySet="Recipes">
+          <ScalarProperty Name="ImgType" ColumnName="ImgType" />
+          <ScalarProperty Name="ImgSize" ColumnName="ImgSize" />
+          <ScalarProperty Name="ImgFileContent" ColumnName="ImgFileContent" />
+          <ScalarProperty Name="ImgName" ColumnName="ImgName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Ingridients" ColumnName="Ingridients" />

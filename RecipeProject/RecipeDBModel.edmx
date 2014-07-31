@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Team_2_RecipesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Team_2_RecipesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Recipes">
           <Key>
             <PropertyRef Name="Id" />
@@ -17,6 +17,10 @@
           <Property Name="Cooking_time" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="NumberOfServings" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="ImgName" Type="varchar" MaxLength="50" />
+          <Property Name="ImgFileContent" Type="varbinary(max)" />
+          <Property Name="ImgSize" Type="bigint" />
+          <Property Name="ImgType" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -46,8 +50,7 @@
             <End Role="Recipes" EntitySet="Recipes" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Team_2_RecipesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -64,6 +67,10 @@
           <Property Name="NumberOfServings" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="User" Relationship="Self.FK_Recipes_User1" FromRole="Recipes" ToRole="User" />
+          <Property Name="ImgName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ImgFileContent" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ImgSize" Type="Int64" />
+          <Property Name="ImgType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -103,6 +110,10 @@
           <EntitySetMapping Name="Recipes">
             <EntityTypeMapping TypeName="Team_2_RecipesModel.Recipe">
               <MappingFragment StoreEntitySet="Recipes">
+                <ScalarProperty Name="ImgType" ColumnName="ImgType" />
+                <ScalarProperty Name="ImgSize" ColumnName="ImgSize" />
+                <ScalarProperty Name="ImgFileContent" ColumnName="ImgFileContent" />
+                <ScalarProperty Name="ImgName" ColumnName="ImgName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Ingridients" ColumnName="Ingridients" />

@@ -3,33 +3,15 @@
 @{
     ViewBag.Title = "Create";
 }
-@section scripts{
-    <script src="~/Scripts/dropzone.js"></script>
 
-    <script type="text/javascript">
-
-$(document).ready(function () {
-    $("#preview").fadeOut(15);
-    $("#refreshButton").click(function () {
-        var imageToLoad = $("#imageId").val();
-        if (imageToLoad.length > 0) {
-            $("#preview").attr("src", "/Document/Show/" + imageToLoad);
-            $("#preview").fadeIn();
-        }
-    });
-});
-
-    </script>
-
-}
 
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Recipe</h4>
         <hr />
@@ -99,6 +81,10 @@ $(document).ready(function () {
         </div>
         <form action="/Document/Upload" class="dropzone" id="my-awesome-dropzone"></form>
 
+        <form action="/Document/Upload">
+            <input type="file" name="Image" />
+        </form>
+
         <input type="text" name="imageId" id="imageId" />
         <button type="button" id="refreshButton">Update Image</button>
         <img src="/" style="display: none" id="preview" />
@@ -117,4 +103,20 @@ $(document).ready(function () {
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/dropzone.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#preview").fadeOut(15);
+            $("#refreshButton").click(function () {
+                var imageToLoad = $("#imageId").val();
+                if (imageToLoad.length > 0) {
+                    $("#preview").attr("src", "/Document/Show/" + imageToLoad);
+                    $("#preview").fadeIn();
+                }
+            });
+        });
+
+    </script>
 }

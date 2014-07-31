@@ -12,6 +12,10 @@
     <Property Name="Cooking_time" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="NumberOfServings" Type="int" Nullable="false" />
     <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ImgName" Type="varchar" MaxLength="50" />
+    <Property Name="ImgFileContent" Type="varbinary(max)" />
+    <Property Name="ImgSize" Type="bigint" />
+    <Property Name="ImgType" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="User">
     <Key>

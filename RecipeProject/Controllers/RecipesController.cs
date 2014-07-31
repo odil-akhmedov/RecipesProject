@@ -229,7 +229,7 @@ namespace RecipeProject.Controllers
                 if (databaseDocument != null)
                 {
                     fileBytes = databaseDocument.ImgFileContent;
-                    fileType = databaseDocument.Type;
+                    fileType = databaseDocument.ImgType;
                 }
             }
             type = fileType;
