@@ -1,3 +1,58 @@
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\RecipeProject.dll.config
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\RecipeProject.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\RecipeProject.pdb
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Antlr3.Runtime.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\EntityFramework.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Newtonsoft.Json.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Owin.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Helpers.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Mvc.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Optimization.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Razor.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.WebPages.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\WebGrease.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Helpers.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Mvc.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Optimization.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.Razor.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.WebPages.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Antlr3.Runtime.pdb
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Newtonsoft.Json.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\EntityFramework.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\obj\Debug\RecipeProject.csprojResolveAssemblyReference.cache
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\obj\Debug\RecipeProject.dll
+C:\Users\Devin\Documents\GitHub\RecipesProject\RecipeProject\obj\Debug\RecipeProject.pdb
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\RecipeProject.dll.config
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\RecipeProject.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\RecipeProject.pdb
@@ -50,6 +105,10 @@ C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\M
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.csprojResolveAssemblyReference.cache
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.pdb
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.csprojResolveAssemblyReference.cache
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.dll
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.Mvc.dll
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.xml
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.Mvc.xml

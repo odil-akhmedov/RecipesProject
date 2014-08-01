@@ -12,25 +12,31 @@ namespace RecipeProject
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Recipe
     {
         public int Id { get; set; }
         [Display(Name = "Recipe Name")]
         public string Title { get; set; }
+        [Display(Name = "Ingredients")]
         public string Ingridients { get; set; }
         public string Directions { get; set; }
-
         [Display(Name = "Preparation Time")]
         public string Prep_time { get; set; }
-
         [Display(Name = "Cooking Time")]
         public string Cooking_time { get; set; }
-        [Display(Name = "# of servings")]
+        [Display(Name = "# of Servings")]
         public int NumberOfServings { get; set; }
         [Display(Name = "Creator")]
         public int UserId { get; set; }
-
+       
+        public string ImgName { get; set; }
+        public byte[] ImgFileContent { get; set; }
+        public Nullable<long> ImgSize { get; set; }
+        public string ImgType { get; set; }
+         [Display(Name = "Image")]
+        public string ImgSrc { get; set; }
+    
         public virtual User User { get; set; }
     }
 }
