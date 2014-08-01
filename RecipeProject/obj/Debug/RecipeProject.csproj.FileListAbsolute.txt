@@ -74,6 +74,8 @@ C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\M
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Newtonsoft.Json.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Owin.dll
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.dll
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.Mvc.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.Helpers.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.Mvc.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.Optimization.dll
@@ -82,6 +84,8 @@ C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\S
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.WebPages.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.WebPages.Razor.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\WebGrease.dll
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.xml
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.Mvc.xml
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.Helpers.xml
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.Mvc.xml
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\System.Web.Optimization.xml
@@ -107,8 +111,3 @@ C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\M
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.pdb
-C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.csprojResolveAssemblyReference.cache
-C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.dll
-C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.Mvc.dll
-C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.xml
-C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\PagedList.Mvc.xml

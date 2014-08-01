@@ -13,10 +13,6 @@
     <Property Name="NumberOfServings" Type="Int32" Nullable="false" />
     <Property Name="UserId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="User" Relationship="Self.FK_Recipes_User1" FromRole="Recipes" ToRole="User" />
-    <Property Name="ImgName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ImgFileContent" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="ImgSize" Type="Int64" />
-    <Property Name="ImgType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ImgSrc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="User">

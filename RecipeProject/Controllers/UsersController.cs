@@ -64,7 +64,7 @@ namespace RecipeProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName")] User user)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,ImgSrc")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace RecipeProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName")] User user)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,ImgSrc")] User user)
         {
             if (ModelState.IsValid)
             {

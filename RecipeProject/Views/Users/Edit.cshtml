@@ -3,7 +3,15 @@
 @{
     ViewBag.Title = "Edit";
 }
+<script type="text/javascript">
+    function getImgLink(id) {
+        var imgName = document.getElementById(id).alt;
 
+        var imageInput = document.getElementById("ImgSrc");
+        var linkToImage = "/img/" + imgName;
+        imageInput.value = linkToImage;
+    }
+</script>
 <h2>Edit</h2>
 
 
@@ -14,6 +22,7 @@
     <div class="form-horizontal">
         <h4>User</h4>
         <hr />
+        <img src="@Model.ImgSrc" alt="@Model.FullName" width="100" height="100">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
 
@@ -32,7 +41,22 @@
                 @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <div style="width: 375px;height: 150px; margin-left: 100px;">
+            <p>Pick the image you like</p>
+            <input name="imageLink" type="radio" value="user01" onchange="getImgLink('user01');">
+            <img src="/img/user01.jpg" alt="user01.jpg" id="user01" width="100" height="100" />
+            <input name="imageLink" type="radio" value="user02" onchange="getImgLink('user02');">
+            <img src="/img/user02.jpg" alt="user02.jpg" id="user02" width="100" height="100" />
+            <input name="imageLink" type="radio" value="user03" onchange="getImgLink('user03');">
+            <img src="/img/user03.jpg" alt="user03.jpg" id="user03" width="100" height="100" />
+        </div>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.ImgSrc, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.ImgSrc, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ImgSrc, "", new { @class = "text-danger" })
+            </div>
+        </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />

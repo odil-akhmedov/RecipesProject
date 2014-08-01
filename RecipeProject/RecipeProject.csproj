@@ -218,6 +218,9 @@
     <Content Include="img\meal08.jpg" />
     <Content Include="img\meal09.JPG" />
     <Content Include="img\meal10.jpg" />
+    <Content Include="img\user01.jpg" />
+    <Content Include="img\user02.jpg" />
+    <Content Include="img\user03.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="RecipeDBModel.edmx">
