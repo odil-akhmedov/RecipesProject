@@ -1,28 +1,142 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<style type="text/css">
+    .carousel-inner img {
+        width: 500px;
+        height: 375px;
+    }
+</style>
 
 <div class="jumbotron">
-    <h1>Welcome to Fun Recipes</h1>
-    <p class="Hello and thank you for visiting Fun Recipes. Here you'll find all sorts of recipes for the home cook."></p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    @*<h1>Welcome to Fun Recipes</h1>
+        <p class="Hello and thank you for visiting Fun Recipes. Here you'll find all sorts of recipes for the home cook."></p>
+        <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+    <!-- Carousel -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="10"></li>
+        </ol>
+
+        <!-- Slider Content (Wrapper for slides )-->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Mouth Watering</h4><br />
+                Delectable Lobster Salad</p></div>
+                <img src="~/img/meal01.jpg" alt="...">
+                
+                <div class="carousel-caption">
+                    
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Family Style</h4><br />
+               Baked Chicken, Green Beans and Potatos</p></div>
+                <img src="~/img/meal02.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>In The Mood for</h4><br />
+                Mexican Tacos!</p></div>
+                <img src="~/img/meal03.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Italian Spaghetti Red Pepper Sauces & Meatballs</h4></p></div>
+                <img src="~/img/meal04.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Family Style</h4><br />
+                Thanksgiving Dinner</p></div>
+                <img src="~/img/meal05.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Keep It Light With This</h4><br />
+                Grilled Chicken & Ceasar Salad</p></div>
+                <img src="~/img/meal06.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Check Out This Recepie </h4><br />
+                Saucy Meatloaf</p></div>
+                <img src="~/img/meal07.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Stuffed Turkey with Spicy Red Potatos</h4></p></div>
+                <img src="~/img/meal08.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Polish Sausages with Potatos </h4></p></div>
+                <img src="~/img/meal09.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <div style="float: right; margin-right: 165px;width: 325px;text-align: center;"><p><h4>Tex Mex Chicken </h4></p></div>
+                <img src="~/img/meal10.jpg" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    <!-- End of Carousel -->
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Create a Account</h2>
+        <h2>Create a user profile to add your recipes</h2>
         <p>Meet others who share your passion for cooking!</p>
-        <p><a class="btn btn-default" href="http://localhost:12735/Account/Register">Register here &raquo;</a></p>
+        <p><a class="btn btn-default" href="http://localhost:12735/Users/Create">Add a Profile &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Add Recipes</h2>
+        <h2>Add Your Own Recipes</h2>
         <p>Have a delicious recepie you want to share? Add it to our receipe book!</p>
         <p><a class="btn btn-default" href="http://localhost:12735/Recipes/Create">Add Recipe &raquo;</a></p>
-    </div>  
-    <div class="col-md-4">
-        <h2></h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
-</div>
+
+    <div class="col-md-4">
+        <h2>Check out the Recipes we have</h2>
+        <p>We have already got over 10 user recipes. Try it.</p>
+        <p><a class="btn btn-default" href="http://localhost:12735/Recipes/">Recipes List &raquo;</a></p>
+    </div> </div>

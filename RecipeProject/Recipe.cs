@@ -31,7 +31,7 @@ namespace RecipeProject
         public int UserId { get; set; }
          [Display(Name = "Image")]
         public string ImgSrc { get; set; }
-    
+        [Display(Name = "Chef")]
         public virtual User User { get; set; }
     }
 }

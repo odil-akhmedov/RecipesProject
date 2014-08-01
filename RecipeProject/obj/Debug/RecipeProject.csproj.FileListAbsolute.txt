@@ -111,3 +111,4 @@ C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\M
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.dll
 C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.pdb
+C:\Users\Odil Akhmedov\Documents\Experience IT\RecipeProject\RecipeProject\obj\Debug\RecipeProject.csprojResolveAssemblyReference.cache

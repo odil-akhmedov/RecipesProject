@@ -201,6 +201,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Amelia.bootstrap.css" />
+    <Content Include="Content\Amelia.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
@@ -208,6 +210,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\DevinDavis.jpg" />
+    <Content Include="img\LamarMcmiller.jpg" />
     <Content Include="img\meal01.jpg" />
     <Content Include="img\meal02.jpg" />
     <Content Include="img\meal03.jpg" />
@@ -218,6 +222,7 @@
     <Content Include="img\meal08.jpg" />
     <Content Include="img\meal09.JPG" />
     <Content Include="img\meal10.jpg" />
+    <Content Include="img\OdiljonAkhmedov.jpg" />
     <Content Include="img\user01.jpg" />
     <Content Include="img\user02.jpg" />
     <Content Include="img\user03.jpg" />

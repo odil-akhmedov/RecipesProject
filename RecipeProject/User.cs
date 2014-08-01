@@ -19,7 +19,8 @@ namespace RecipeProject
         {
             this.Recipes = new HashSet<Recipe>();
         }
-    
+
+        [Display(Name = "Chef")]
         public int Id { get; set; }
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
