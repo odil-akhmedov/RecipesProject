@@ -27,6 +27,7 @@
     <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Recipes" Relationship="Self.FK_Recipes_User1" FromRole="User" ToRole="Recipes" />
+    <Property Name="ImgSrc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK_Recipes_User1">
     <End Role="User" Type="Self.User" Multiplicity="1" />

@@ -5,10 +5,6 @@
       <EntityTypeMapping TypeName="Team_2_RecipesModel.Recipe">
         <MappingFragment StoreEntitySet="Recipes">
           <ScalarProperty Name="ImgSrc" ColumnName="ImgSrc" />
-          <ScalarProperty Name="ImgType" ColumnName="ImgType" />
-          <ScalarProperty Name="ImgSize" ColumnName="ImgSize" />
-          <ScalarProperty Name="ImgFileContent" ColumnName="ImgFileContent" />
-          <ScalarProperty Name="ImgName" ColumnName="ImgName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Ingridients" ColumnName="Ingridients" />
@@ -23,6 +19,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="Team_2_RecipesModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ImgSrc" ColumnName="ImgSrc" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />

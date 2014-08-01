@@ -1,4 +1,7 @@
-﻿@model IEnumerable<RecipeProject.Recipe>
+﻿@*@model IEnumerable<RecipeProject.Recipe>*@
+@model PagedList.IPagedList<RecipeProject.Recipe> 
+@using PagedList.Mvc; 
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -9,10 +12,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Index", "Recipes", FormMethod.Get))
 {
     <p>
-        Find by name: @Html.TextBox("SearchString")
+        Find by recipe name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
         <input type="submit" value="Search" />
     </p> 
 }
@@ -38,10 +41,10 @@
             @Html.ActionLink("# of servings", "Index", new { sortOrder = ViewBag.NOSSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.User.FullName)
+            Creator
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ImgSrc)
+            Image
         </th>
         <th></th>
     </tr>
@@ -84,3 +87,5 @@
     }
 
 </table>
+<br /> Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

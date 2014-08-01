@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using RecipeProject;
 using System.IO;
 using RecipeProject.Models;
+using PagedList;
 
 namespace RecipeProject.Controllers
 {
@@ -70,9 +71,9 @@ namespace RecipeProject.Controllers
             }
             int pageSize = 3; 
             int pageNumber = (page ?? 1);
-            //return View(recipes.ToPagedList(pageNumber, pageSize));
+            return View(recipes.ToPagedList(pageNumber, pageSize));
 
-            return View(recipes.ToList());
+            //return View(recipes.ToList());
         }
 
         // GET: Recipes/Details/5
@@ -186,76 +187,76 @@ namespace RecipeProject.Controllers
 
         // Images controller
 
-        [HttpGet]
-        public ActionResult Show(int? id)
-        {
-            string mime;
-            byte[] bytes = LoadImage(id.Value, out mime);
-            return File(bytes, mime);
-        }
+        //[HttpGet]
+        //public ActionResult Show(int? id)
+        //{
+        //    string mime;
+        //    byte[] bytes = LoadImage(id.Value, out mime);
+        //    return File(bytes, mime);
+        //}
 
-        [HttpPost]
-        public ActionResult Upload()
-        {
-            SuccessModel viewModel = new SuccessModel();
-            if (Request.Files.Count == 1)
-            {
-                var name = Request.Files[0].FileName;
-                var size = Request.Files[0].ContentLength;
-                var type = Request.Files[0].ContentType;
-                viewModel.Success = HandleUpload(Request.Files[0].InputStream, name, size, type);
-            }
-            return Json(viewModel);
-        }
+        //[HttpPost]
+        //public ActionResult Upload()
+        //{
+        //    SuccessModel viewModel = new SuccessModel();
+        //    if (Request.Files.Count == 1)
+        //    {
+        //        var name = Request.Files[0].FileName;
+        //        var size = Request.Files[0].ContentLength;
+        //        var type = Request.Files[0].ContentType;
+        //        viewModel.Success = HandleUpload(Request.Files[0].InputStream, name, size, type);
+        //    }
+        //    return Json(viewModel);
+        //}
 
-        private bool HandleUpload(Stream fileStream, string name, int size, string type)
-        {
-            bool handled = false;
+        //private bool HandleUpload(Stream fileStream, string name, int size, string type)
+        //{
+        //    bool handled = false;
 
-            try
-            {
-                byte[] documentBytes = new byte[fileStream.Length];
-                fileStream.Read(documentBytes, 0, documentBytes.Length);
+        //    try
+        //    {
+        //        byte[] documentBytes = new byte[fileStream.Length];
+        //        fileStream.Read(documentBytes, 0, documentBytes.Length);
 
-                Recipe databaseDocument = new Recipe
-                {
-                    ImgFileContent = documentBytes,
-                    ImgName = name,
-                    ImgSize = size,
-                    ImgType = type
-                };
+        //        Recipe databaseDocument = new Recipe
+        //        {
+        //            ImgFileContent = documentBytes,
+        //            ImgName = name,
+        //            ImgSize = size,
+        //            ImgType = type
+        //        };
 
 
-                using (Team_2_RecipesEntities databaseContext = new Team_2_RecipesEntities())
-                {
-                    databaseContext.Recipes.Add(databaseDocument);
-                    handled = (databaseContext.SaveChanges() > 0);
-                }
-            }
-            catch (Exception ex)
-            {
-                // Oops, something went wrong, handle the exception
-            }
+        //        using (Team_2_RecipesEntities databaseContext = new Team_2_RecipesEntities())
+        //        {
+        //            databaseContext.Recipes.Add(databaseDocument);
+        //            handled = (databaseContext.SaveChanges() > 0);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Oops, something went wrong, handle the exception
+        //    }
 
-            return handled;
-        }
+        //    return handled;
+        //}
 
-        private byte[] LoadImage(int id, out string type)
-        {
-            byte[] fileBytes = null;
-            string fileType = null;
-            using (Team_2_RecipesEntities databaseContext = new Team_2_RecipesEntities())
-            {
-                var databaseDocument = databaseContext.Recipes.FirstOrDefault(doc => doc.Id == id);
-                if (databaseDocument != null)
-                {
-                    fileBytes = databaseDocument.ImgFileContent;
-                    fileType = databaseDocument.ImgType;
-                }
-            }
-            type = fileType;
-            return fileBytes;
-        }
+        //private byte[] LoadImage(int id, out string type)
+        //{
+        //    byte[] fileBytes = null;
+        //    string fileType = null;
+        //    using (Team_2_RecipesEntities databaseContext = new Team_2_RecipesEntities())
+        //    {
+        //        var databaseDocument = databaseContext.Recipes.FirstOrDefault(doc => doc.Id == id);
+        //        if (databaseDocument != null)
+        //        {
+        //            fileBytes = databaseDocument.ImgFileContent;
+        //            fileType = databaseDocument.ImgType;
+        //        }
+        //    }
+        //    type = fileType;
+        //    return fileBytes;
+        //}
 
     }
 }

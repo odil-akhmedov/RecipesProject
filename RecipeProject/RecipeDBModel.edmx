@@ -17,10 +17,6 @@
           <Property Name="Cooking_time" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="NumberOfServings" Type="int" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
-          <Property Name="ImgName" Type="varchar" MaxLength="50" />
-          <Property Name="ImgFileContent" Type="varbinary(max)" />
-          <Property Name="ImgSize" Type="bigint" />
-          <Property Name="ImgType" Type="varchar" MaxLength="50" />
           <Property Name="ImgSrc" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="User">
@@ -30,6 +26,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="LastName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ImgSrc" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Recipes_User1">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -82,6 +79,7 @@
           <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Recipes" Relationship="Self.FK_Recipes_User1" FromRole="User" ToRole="Recipes" />
+          <Property Name="ImgSrc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Recipes_User1">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -113,10 +111,6 @@
             <EntityTypeMapping TypeName="Team_2_RecipesModel.Recipe">
               <MappingFragment StoreEntitySet="Recipes">
                 <ScalarProperty Name="ImgSrc" ColumnName="ImgSrc" />
-                <ScalarProperty Name="ImgType" ColumnName="ImgType" />
-                <ScalarProperty Name="ImgSize" ColumnName="ImgSize" />
-                <ScalarProperty Name="ImgFileContent" ColumnName="ImgFileContent" />
-                <ScalarProperty Name="ImgName" ColumnName="ImgName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Ingridients" ColumnName="Ingridients" />
@@ -131,6 +125,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="Team_2_RecipesModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ImgSrc" ColumnName="ImgSrc" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />

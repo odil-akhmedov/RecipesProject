@@ -19,7 +19,7 @@ namespace RecipeProject
         {
             this.Recipes = new HashSet<Recipe>();
         }
-    
+
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -31,6 +31,8 @@ namespace RecipeProject
                 return LastName + ", " + FirstName;
             }
         }
+        public string ImgSrc { get; set; }
+    
         public virtual ICollection<Recipe> Recipes { get; set; }
     }
 }

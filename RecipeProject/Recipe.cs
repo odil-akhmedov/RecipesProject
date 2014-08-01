@@ -29,14 +29,13 @@ namespace RecipeProject
         public int NumberOfServings { get; set; }
         [Display(Name = "Creator")]
         public int UserId { get; set; }
-       
+
         public string ImgName { get; set; }
         public byte[] ImgFileContent { get; set; }
         public Nullable<long> ImgSize { get; set; }
         public string ImgType { get; set; }
-         [Display(Name = "Image")]
+        [Display(Name = "Image")]
         public string ImgSrc { get; set; }
-    
         public virtual User User { get; set; }
     }
 }
