@@ -4,13 +4,13 @@
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Recipes List";
 }
 
-<h2>Index</h2>
+<h2>Recipes List</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Recipe", "Create")
 </p>
 @using (Html.BeginForm("Index", "Recipes", FormMethod.Get))
 {
